@@ -11,7 +11,7 @@ RUN mvn clean package -DskipTests -B
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
-# Cambia aquí al nombre de tu JAR real:
+# Nombre correcto del JAR generado
 COPY --from=build /app/target/backendNutriSmart-0.0.1-SNAPSHOT.jar ./app.jar
 
 ENV PORT=8080
